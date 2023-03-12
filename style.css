@@ -1,0 +1,672 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+.subtitle{
+    font-size:1rem;
+}
+.text{
+    margin-right: 0.975rem
+}
+
+
+/*layout*/
+
+body{
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+.title{
+    font: 700 1.875rem 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+.section{
+    padding: 10rem 0;
+}
+
+.section .title{
+    margin-bottom: 1rem;
+}
+
+.section header{
+    margin-bottom: 4rem;
+}
+
+.section header strong{
+    color: var(--base-color);
+}
+
+main{
+    margin-top: 5rem;
+}
+
+.divider-1{
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        hsla(var(--hue), 36%, 57%, 1),
+        hsla(var(--hue), 65%, 88%, 0.34) );
+}
+
+.divider-2{
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        hsla(var(--hue), 65%, 88%, 0.34),
+        hsla(var(--hue), 36%, 57%, 1));
+}
+
+
+.container{
+    width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+/*Navigation*/
+
+.logo{
+    font: 700 1.31rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
+
+.logo span{
+    color: var(--base-color);
+}
+
+.logo-alt{
+    font: 700 1.31rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
+
+.logo-alt span{
+    color: var(--body-color);
+}
+
+#header{
+    display: flex;
+    width: 100%;
+    border-bottom: 1.5px solid #e4e4e4;
+
+    position: fixed;
+    z-index: 100;
+    background-color: var(--body-color);
+    top: 0;
+    left: 0;
+}
+
+.scroll{
+    opacity: 0;
+    transition: 1.3s;
+}
+
+#header.scroll{
+    box-shadow: 7px 7px 12px rgba(2, 0, 122, 0.575) ;
+    opacity: 1;
+}
+
+
+nav{
+    width: 100%;
+    height: 4.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .menu ul{
+    display: none;
+}
+
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+    background: var(--body-color);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    place-content: center;
+    
+}
+
+nav.show .menu ul{
+    display: grid;
+    transition: 1s;
+}
+
+nav ul.grid{
+    gap: 4rem;
+}
+
+nav ul li a{
+    transition: color 0.8s;
+    position: relative;
+}
+
+nav ul li a:hover{
+    color: var(--base-color);
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--base-color);
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    transition: width 0.5s;
+
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--base-color);
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    font-weigth:bold;
+}
+
+
+
+nav .menu{
+    opacity: 0;
+    visibility: hidden;
+    top: -20rem;
+    transition: 0.5s;
+}
+
+nav ul li{
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+}
+
+/* togle menu */
+
+.toggle{
+    color: var(--base-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+nav .icon-close{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    top: -1.5rem;
+    transition: 1.2s;
+}
+
+nav.show div.icon-close{
+    visibility: visible;
+    opacity: 1;
+    top: 1.5rem;
+}
+
+
+/* Variaveis */
+:root{
+    --hue:242;
+    --base-color: hsl(var(--hue) 60% 35%);
+    --base-color-second: hsl(var(--hue) 65% 81%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color:hsl(0 0% 46%);
+    --text-color-light:hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+}
+
+/* home */
+#home{
+    overflow: hidden;
+}
+#home .container{
+    margin-left: 0;
+}
+
+.grid{
+    display: grid;
+    gap: 2rem;
+}
+
+#home .image img{
+    width: 75%;
+    height: 20%rem;
+    position: relative;
+    right: 2.93rem;
+}
+
+#home .image{
+    position: relative;
+}
+
+#home .image::before{
+    content: '';
+    height: 90%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.8%;
+    z-index: 0;
+}
+
+#home .image ,
+#home .image::before{
+    border-radius: 0.25rem;
+} 
+
+#home .text{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+#home .text h1{
+    margin-bottom: 1rem;
+}
+
+#home .text p{
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    height: 3.5rem;
+    padding: 0 2rem;
+    border-radius: .25rem;
+    font: 500 1rem "DM Sans", sans-serif;
+    transition: background .5s;
+}
+
+.button:hover{ 
+    background-color: var(--base-color-alt);
+}
+
+/* about */
+
+#about{
+    background-color: white;
+}
+
+#about .container{
+    margin-left: 0;
+}
+
+#about .image img{
+    position: relative;
+}
+
+#about .image{
+    position: relative;
+}
+
+#about .image::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -8.3%;
+    left: -33%;
+    z-index: 0;
+}
+
+#about .image ,
+#about .image::before{
+    border-radius: 0.25rem;
+} 
+
+#about .text{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/*Services*/
+
+#services .container{
+    align-content: center;
+}
+
+#services .container p{
+    margin-right: 1.5rem;
+}
+
+.cards.grid{
+    gap: 1.5rem;
+}
+
+
+.card{
+    margin-right: 2.5rem;
+    padding: 3.625rem 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: .25rem solid var(--base-color);
+    border-radius: .25rem .25rem 0 0;
+    text-align: center;
+}
+
+.card i{
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    color: var(--base-color);
+}
+
+.card.title{
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Testimonials */
+#testemonials{
+    background-color: white;
+}
+
+#testemonials header{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+}
+#testemonials .container{
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+#testemonials blockquote{
+
+    padding: 2rem;
+    box-shadow: 0px 0px 12px rgba(124, 0, 72, 0.28);
+    border-radius: 0.25rem;
+}
+
+#testemonials blockquote p{
+    position: relative;
+    text-indent: 1.875rem;
+    margin-bottom: 1.5rem;
+    color: var(--title-color);
+    font-size: 1rem;
+}
+
+#testemonials blockquote p span{
+    font: 700 3rem serif;
+    position: absolute;
+    color: var(--base-color);
+    top: -0.5rem;
+    left: -1.875rem;
+}
+
+#testemonials cite{
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+#testemonials cite img{
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    clip-path: circle();
+    margin-right: 0.5rem;
+}
+
+/* Swiper */
+
+.swiper-slide{
+    height: auto;
+    padding: 4rem 1rem;
+    
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--base-color);
+}
+
+/* CONTATOS */
+
+#contacts .grid{
+    gap: 4rem;
+}
+
+#contacts .text p {
+    margin-bottom: 2rem;
+    margin-right: 1.5rem;
+}
+
+#contacts .button i,
+#contacts ul li i{
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+#contacts ul .grid{
+    gap: 2rem;
+}
+
+#contacts ul li{
+    display: flex;
+    align-items: center;
+}
+
+#contacts ul li i{
+    color: var(--base-color);
+}
+
+/*RODAPÉ*/
+footer{
+    background: var(--base-color)
+}
+
+footer p{
+    color: var(--body-color);
+}
+
+footer .logo-alt{
+    font-size: 1.31rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+footer.social{
+    grid-auto-flow:column;
+    width: fit-content;
+}
+
+footer .brand p{
+    color: var(--text-color-light);
+    margin-bottom: 0.75rem;
+}
+
+footer i{
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+}
+
+footer .social a{
+    display: inline-block;
+    margin-right: 2rem;
+    transition: 0.8s;
+    transform: translateY(0);
+}
+
+footer .social a:hover{
+    transform: translateY(-1rem);
+}
+
+.back-to-top{
+    background: var(--base-color);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding:0.7rem;
+    clip-path:circle();
+    color: var(--text-color-light);
+    font-size:1.5rem;
+    line-height:0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    transform: translateY(100%);
+}
+
+.back-to-top.show{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVIDADE */
+
+/*  large devices: 1200 >*/
+
+@media(min-width: 1199px){
+    .container{
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button{
+        height: 3.125rem;
+    }
+
+   
+    nav .menu{
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+    nav .menu ul{
+        display: flex;
+        gap: 2rem
+    }
+
+    nav .menu ul li a.title{
+        font: 400 1rem 'Poppins', sans-serif;
+        -webkit-font-smoothing:antialised;
+    }
+
+    nav .icon-menu{
+        display:none;
+    }
+    main{
+        margin-top: 5rem;
+    }
+
+    .section{
+        padding: 10rem 0;
+    }
+
+    /* home */
+    #home .container{
+        margin: 0 auto;
+        grid-auto-flow: column;
+        justify-content: space-between
+    }
+
+    #home .image{
+        order:1;
+    }
+
+    #home .text{
+        order:0;
+        max-width: 24rem;
+        text-align: left;
+    }
+    /* about */
+    #about .container{
+        margin: 0 auto;
+        grid-auto-flow:column;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr
+    }
+
+    #testemonials .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container header,
+    #testemonials .container header{
+        max-width: 32rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* contact */
+    #contacts .container{
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    #contacts .text{
+        max-width: 26rem;
+    }
+    /*footer*/
+
+    footer .section{
+        padding: 2.15rem 0;
+    }
+
+    footer .container{
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    footer .logo-alt{
+        font-size: 2.25rem
+    }
+
+}
+/*  large devices: 992 >*/
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+        <!-- styles -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- icones -->
+        <link rel="stylesheet" href="assets/style.css">
+
+        <!-- fontes -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        
+        
+        <title>Consultório Jefferson Santos</title>
+    </head>
+    <body>
+        <header id="header">
+            <nav class="container ">
+                <a class="logo" href="#">Jefferson<span>Santos</span>.</a>
+                <!-- MENU -->
+                <div class="menu">
+                    <ul class="grid">
+                        <li><a class="title" href="#home">Inicio</a></li>
+                        <li><a class="title" href="#about">Sobre</a></li>
+                        <li><a class="title" href="#services">Serviços</a></li>
+                        <li><a class="title" href="#testemonials">Depoimentos</a></li>
+                        <li><a class="title" href="#contacts">Contatos</a></li>
+                    </ul>
+                </div>
+                <!-- /menu-->
+                <div class="toggle icon-menu"></div>
+                <div class="toggle icon-close"></div>
+            </nav>
+        </header>
+        
+        <main>
+
+            <!--- seção home--->
+            <section id="home" class="section">
+                <div class="container grid">
+                    <div class="image">
+                        <img src="views/jefferson.jpg" alt="Doutor Jefferson" srcset="">
+                    </div>
+                    <div class="text">
+                        <h2 class="title">Cirurgião Dentista.</h2>
+                        <p class="subtitle">Consultório em criciuma especializado em tratamentos ortodonticos.</p>
+                        <a class="button" href="#contacts">Agendar um horário</a> 
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider-1"></div>
+
+            <!--seção sobre -->
+            <section id="about" class="section">
+                <div class="container grid">
+                    <div class="image">
+                        <img src="views/dentadura.avif" alt="Implantes Dentarios">
+                    </div>
+                    <div class="text">
+                        <h2 class="title">
+                            Sobre
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam quibusdam perspiciatis eaque quam cum sapiente odio et corporis, ipsa at sed inventore tempora praesentium earum nulla? Quae, iure consequuntur.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci distinctio tenetur maxime sit numquam, neque nisi, quis laudantium facere quia suscipit error atque facilis doloribus, inventore odio corrupti exercitationem minima.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nobis sunt ut a laudantium eligendi hic non nulla consectetur numquam error perspiciatis. Dicta rerum consequatur voluptas voluptatem suscipit cumque nulla.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, sequi. Iusto autem cum, hic tempore veniam dolor quasi eveniet maiores ipsam repellendus, ea blanditiis similique! Consequatur, officiis voluptatum. Natus, pariatur.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider-2"></div>
+
+            <!-- seção serviços-->
+
+            <section id="services" class="section">
+                <div class="container grid">
+                    <header>
+                        <h2 class="title">
+                            Serviços
+                        </h2>
+                        <p>
+                            Com mais de 3 anos no mercado, o <strong>Consultório Jefferson 
+                            Santos</strong> ja conquistou
+                            clientes em inúmeros estados com seus tratamentos ortodonticos.
+                        </p>
+                    </header>
+                    <div class="cards grid">
+                        <!-- Div 1 cards-->
+                        <div class="card">
+                            <i class="icon-dente"></i>
+                            <h3 class="title">Clareamento</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, doloremque sequi repellendus aspernatur, quibusdam, excepturi id dolore deleniti vitae perspiciatis </p>
+                        </div>
+
+                        <!-- Div 2 cards-->
+                        <div class="card">
+                            <i class="icon-bracadeira"></i>
+                            <h3 class="title">Ortodontia</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, doloremque sequi repellendus aspernatur, quibusdam, excepturi id dolore deleniti vitae perspiciatis </p>
+                        </div>
+
+                        <!-- Div 3 cards-->
+                        <div class="card">
+                            <i class="icon-pacote-de-dentista"></i>
+                            <h3 class="title">Restaurações</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, doloremque sequi repellendus aspernatur, quibusdam, excepturi id dolore deleniti vitae perspiciatis </p>
+                        </div>
+
+                        <!-- fim dos cards-->
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider-1"></div>
+            
+            <!-- seção depoimentos -->
+            <section id="testemonials" class="section">
+                <div class="container">
+                    <header>
+                        <h2 class="title">
+                        Depoimentos de quem já passou por aqui
+                        </h2>
+                    </header>
+
+                    <div class="testimonials swiper">
+                        <div class="swiper-wrapper">
+                            <!-- testemunho 1 -->
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                 <p>
+                                 <span>&ldquo;</span>
+                                 Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados. 
+                                 </p>
+                                 <cite>
+                                     <img src="views/Wanessa souza.jpg" alt="Wanessa">
+                                     Wanessa Souza
+                                 </cite>
+                            </blockquote>
+                         </div>
+ 
+                         <!-- testemunho 2 -->
+                         <div class="testimonial swiper-slide">
+                             <blockquote>
+                                 <p>
+                                 <span>&ldquo;</span>
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                 Quis dolorum fugit labore magnam perferendis, eveniet, optio maiores vel ad doloribus architecto pariatur natus harum! 
+                                 Qui minima facere accusantium iure harum.
+                                 </p>
+                                 <cite>
+                                     <img src="views/Franciele Venega.jpg" alt="Franciele">
+                                     Franciele Venega
+                                 </cite>
+                            </blockquote>
+                         </div>
+ 
+                         <!-- testemunho 3 -->
+                         <div class="testimonial swiper-slide">
+                             <blockquote>
+                                 <p>
+                                 <span>&ldquo;</span>
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                 Quis dolorum fugit labore magnam perferendis, eveniet, optio maiores vel ad doloribus architecto pariatur natus harum! 
+                                 Qui minima facere accusantium iure harum.
+                                 </p>
+                                 <cite>
+                                     <img src="views/Valesca Franis.jpg" alt="Valesca">
+                                     Valesca Franis
+                                 </cite>
+                            </blockquote>
+ 
+                            <!-- final -->
+                         </div>
+
+                        </div>
+
+                        <!-- paginação -->
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider-2"></div>
+
+            <!-- seção contatos-->
+            <section id="contacts" class="section">
+                <div class="container grid">
+                    <div class="text">
+                        <h2 class="title">Entre em contato conosco</h2>
+                        <p>Entre em contato com a Jefferson Santos, queremos tirar suas duvidas, ouvir suas criticas e sujestões.
+                        </p>
+                        <a href=" https://api.whatsapp.com/send?phone=+554896967020&text=OI! Gostaria de agendar um horario" 
+                        target="_blank" 
+                        class="button">
+                            <i class="icon-whatsapp"></i>Entrar em contato
+                        </a>
+                    </div>
+
+                    <div class="links">
+                        <ul class="grid">
+                            <li><i class="icon-whatsapp"></i>48 99696-7020</li>
+                            <li><i class="icon-map-pin"></i>TV. Germano Magrin,100 - sala 406</li>
+                            <li><i class="icon-mail"></i>jeff.silva_snt@gmail.com</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+              <div class="divider-1"></div>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="section grid">
+            <div class="container grid">
+                <div class="brand">
+                    <a href="#home" class="logo-alt">Jefferson<span>Santos</span></a>
+                    <p>Todos os direitos reservados</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/jeff.silva_snt/" target="_blank"><i class="icon-instagram" ></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="icon-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#home" class="back-to-top"><i class="icon-arrow-up2"></i></a>
+
+        <!-- swiper -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-- main -->
+        <script src="main.js"></script>
+
+    </body>
+</html>
